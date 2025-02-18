@@ -1,32 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Episode Events</title>
-  <meta name="description" content="Join us for exciting events organized by Episode Events, where university students can connect and socialize.">
-  <meta name="keywords" content="events, university, social, networking, Episode Events">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Events - Episode Events</title>
+    <meta name="description" content="Discover exciting university events - from parties to networking sessions. Find your next social adventure!">
+    <meta name="keywords" content="university events, student parties, networking, social events">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="assets/img/favicon_io/favicon.ico" type="image/x-icon">
 </head>
-<body class="index-page">
+<body class="events-page">
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-map-marker-alt"></i>
+            TheEvent
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li class="dropdown">
+                    <a href="#">Venues <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="btn">Login</button>
+    </header>
 
-  <header id="header" class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="Episode Events Logo">
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="organizers.html" class="btn-login">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Events Hero Section -->
+    <section class="events-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Upcoming Events</h1>
+            <p>Find your next adventure</p>
+        </div>
+    </section>
 
+    <!-- Event Categories -->
+    <section class="event-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active">All Events</button>
+                <button class="filter-btn">Parties</button>
+                <button class="filter-btn">Networking</button>
+                <button class="filter-btn">Workshops</button>
+                <button class="filter-btn">Sports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="events-grid">
+        <div class="container">
+            <div class="events-wrapper">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="path/to/event1.jpg" alt="Spring Break Party">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Mar</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Party</div>
+                        <h3>Spring Break Kick-off Party</h3>
+                        <div class="event-info">
+                            <p><i class="fas fa-clock"></i> 8:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Beach Club</p>
+                        </div>
+                        <p class="event-description">Start your spring break with an unforgettable night of music, dancing, and fun!</p>
+                        <div class="event-footer">
+                            <span class="price">$15</span>
+                            <button class="btn-small">Get Tickets</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="path/to/event2.jpg" alt="Networking Event">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">Mar</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Networking</div>
+                        <h3>Tech Industry Mixer</h3>
+                        <div class="event-info">
+                            <p><i class="fas fa-clock"></i> 6:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Innovation Hub</p>
+                        </div>
+                        <p class="event-description">Connect with industry professionals and fellow students in tech.</p>
+                        <div class="event-footer">
+                            <span class="price">Free</span>
+                            <button class="btn-small">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more event cards as needed -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more">
+                <button class="btn">Load More Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Creating unforgettable experiences for university students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-</html></div>
+</html>
