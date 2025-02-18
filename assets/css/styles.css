@@ -327,7 +327,7 @@ nav ul li a.active {
 /* Event Categories */
 .event-categories {
   padding: 30px 0;
-  background: #f8f9fa;
+  background: #1a1a1a;
 }
 
 .category-filters {
@@ -356,7 +356,7 @@ nav ul li a.active {
 /* Events Grid */
 .events-grid {
   padding: 60px 0;
-  background: #fff;
+  background: #1a1a1a;
 }
 
 .events-wrapper {
@@ -369,7 +369,7 @@ nav ul li a.active {
 .event-card {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -443,7 +443,7 @@ nav ul li a.active {
 }
 
 .event-description {
-  color: #666;
+  color: #b9b4b4;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.5;
