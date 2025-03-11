@@ -10,38 +10,19 @@
     <script src="main.js"></script>
 </head>
 <body class="events-page">
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <i class="fas fa-map-marker-alt"></i>
-            EPISODE EVENTS
+    <section class="events-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Karibu Organizer!</h1>
+            <p>Kuja tupange!</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html" >Events</a></li>
-                <li class="dropdown">
-                    <a href="venue.html">Venues <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                     <li><a href="#cuea">Catholic University of Eastern Africa</a></li>
-                  <li><a href="#mmu">MultiMedia University</a></li>
-                  <li><a href="#nazarene">Nazarene University</a></li>
-                  <li><a href="#amref">Amref International University</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="organizers.html" class="active"> For Organizers</a></li>
-            </ul>
-        </nav>
-        <button class="btn" onclick="window.location.href='login.html'">Login</button>
-    </header>
-   
+    </section>
+ 
 <!-- submit event Form -->
     <div class="contact-form">
       <form action="#" method="POST" id="contactForm">
           <div class="form-header">
-              <h2>Submit an event</h2>
+              <h2>Ready to set up an event?</h2>
           </div>
           <div class="form-group">
               <label for="name">Name of School or Organizer</label>
@@ -60,7 +41,7 @@
               <textarea id="message" name="message" required></textarea>
           </div>
           <button type="submit" class="btn btn-submit">
-              <span>Send Message</span>
+              <span>SET UP EVENT</span>
               <i class="fas fa-paper-plane"></i>
           </button>
       </form>
@@ -68,5 +49,33 @@
 </div>
 </div>
 </section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Creating unforgettable experiences for university students.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
+

@@ -7,3 +7,24 @@ window.addEventListener('scroll', function() {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+  // LOGIN FUNCTION
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      let formData = new FormData(this);
+
+      fetch("login.php", {
+          method: "POST",
+          body: formData,
+      })
+      .then(response => response.text())
+      .then(data => {
+          alert(data);
+          if (data.includes("Login successful")) {
+              window.location.href = "organizers.html";
+          }
+      })
+      .catch(error => console.error("Error:", error));
+  });
+});
