@@ -1212,3 +1212,171 @@ footer {
       grid-template-columns: 1fr;
   }
 }
+/*for login page*/
+.login-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/* Logo styling */
+.logo-container {
+  background-color: #e61e1e;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 5px 15px rgba(230, 30, 30, 0.5);
+}
+
+.logo-container i {
+  font-size: 30px;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  background-color: #3a3a3a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.input-container input::placeholder {
+  color: #777;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #e61e1e;
+  box-shadow: 0 0 5px rgba(230, 30, 30, 0.5);
+}
+
+/* Options styling */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px;
+  cursor: pointer;
+  accent-color: #e61e1e;
+}
+
+.remember-me label {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.forgot-password {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password:hover {
+  color: #e61e1e;
+}
+
+/* Button styling */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e61e1e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(230, 30, 30, 0.3);
+}
+
+.login-btn:hover {
+  background-color: #c51818;
+}
+
+/* Register link styling */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.register-link a {
+  color: #e61e1e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.register-link a:hover {
+  color: #ff6b6b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+  }
+  
+  .login-card {
+      padding: 20px;
+  }
+}
