@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="main.js"></script>
 </head>
+<!--HEADER -->
+<header>
+    <div class="logo">
+        <i class="fas fa-map-marker-alt"></i>
+        EPISODE EVENTS
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li class="dropdown"  class="active">
+                <a href="#">Venues <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#cuea">Catholic University of Eastern Africa</a></li>
+                  <li><a href="#mmu">MultiMedia University</a></li>
+                  <li><a href="#nazarene">Nazarene University</a></li>
+                  <li><a href="#amref">Amref International University</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="btn" onclick="window.location.href='login.html'">Login</button>
+</header>
+
 <body class="events-page">
     <section class="events-hero">
         <div class="overlay"></div>
@@ -19,32 +45,47 @@
     </section>
  
 <!-- submit event Form -->
-    <div class="contact-form">
-      <form action="#" method="POST" id="contactForm">
-          <div class="form-header">
-              <h2>Ready to set up an event?</h2>
-          </div>
-          <div class="form-group">
-              <label for="name">Name of School or Organizer</label>
-              <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-              <label for="subject">Name of event</label>
-              <input type="text" id="subject" name="subject" required>
-          </div>
-          <div class="form-group">
-              <label for="message">Details about the event</label>
-              <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-submit">
-              <span>SET UP EVENT</span>
-              <i class="fas fa-paper-plane"></i>
-          </button>
-      </form>
+<form action="#" method="POST" id="contactForm">
+    <h2>Ready to set up an event?</h2>
+
+    <label for="title">Event Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="event_desc">Event Description</label>
+    <textarea id="event_desc" name="event_desc" required></textarea>
+
+    <label for="event_type">Event Type</label>
+    <select id="event_type" name="event_type" required>
+        <option value="Party">Party</option>
+        <option value="Networking">Networking</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Sports">Sports</option>
+    </select>
+
+    <label for="event_date">Event Date</label>
+    <input type="date" id="event_date" name="event_date" required>
+
+    <label for="start_time">Start Time</label>
+    <input type="time" id="start_time" name="start_time" required>
+
+    <label for="end_time">End Time</label>
+    <input type="time" id="end_time" name="end_time" required>
+
+    <label for="venue_id">Venue ID</label>
+    <input type="number" id="venue_id" name="venue_id" required>
+
+    <label for="organizer_id">Organizer ID</label>
+    <input type="number" id="organizer_id" name="organizer_id" required>
+
+    <label for="price">Price</label>
+    <input type="number" step="0.01" id="price" name="price" required>
+
+    <label for="capacity">Capacity</label>
+    <input type="number" id="capacity" name="capacity" required>
+
+    <button type="submit">SET UP EVENT</button>
+</form>
+
   </div>
 </div>
 </div>
