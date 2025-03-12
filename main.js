@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("get_events.php")
         .then(response => response.json())
         .then(data => {
-            let eventContainer = document.getElementById("events");
+            let eventContainer = document.getElementById("event_details");
             if (eventContainer) {
                 eventContainer.innerHTML = "";
                 data.forEach(event => {
@@ -67,12 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <p><i class="fas fa-clock"></i> ${event.start_time} - ${event.end_time}</p>
         <p><i class="fas fa-map-marker-alt"></i> ${event.venue_id}</p>
     </div>
-    <p class="event-description">Connect with industry professionals and fellow students in tech.</p>
+    <p class="event-description">${event_desc}</p>
     <div class="event-footer">
         <span class="price">$${event.price}</span>
         <button class="btn-small">RSVP</button>
-    </div>
-</div>`;
+    </div>`;
                 });
             }
         })
@@ -80,4 +79,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadEvents(); // Load events when the page loads
+});
+
+//reviews
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // SUBMIT A REVIEW
+    document.getElementById("reviewForm")?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let formData = new FormData(this);
+
+        fetch("reviews.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+            loadReviews(formData.get("event_id")); // Refresh reviews
+        })
+        .catch(error => console.error("Error submitting review:", error));
+    });
+
+    // LOAD REVIEWS FOR AN EVENT
+    function loadReviews(eventId) {
+        fetch(`reviews.php?event_id=${eventId}`)
+        .then(response => response.json())
+        .then(data => {
+            let reviewContainer = document.getElementById("reviews-container");
+            if (reviewContainer) {
+                reviewContainer.innerHTML = "";
+                data.forEach(review => {
+                    reviewContainer.innerHTML += `
+                        <div class="review">
+                            <p><strong>${review.username}</strong> rated <span class="rating">${"⭐".repeat(review.rating)}</span></p>
+                            <p class="comment">${review.comment}</p>
+                            <p class="date">${review.created_at}</p>
+                        </div>`;
+                });
+            }
+        })
+        .catch(error => console.error("Error fetching reviews:", error));
+    }
+
+    // AUTO LOAD REVIEWS (Replace eventId with the actual event ID)
+    let eventId = document.getElementById("reviewForm")?.dataset.eventId;
+    if (eventId) {
+        loadReviews(eventId);
+    }
 });

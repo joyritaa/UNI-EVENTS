@@ -17,7 +17,6 @@
   <nav>
       <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
           <li><a href="events.html">Events</a></li>
           <li class="dropdown">
               <a href="venue.html">Venues <i class="fas fa-chevron-down"></i></a>
@@ -28,6 +27,7 @@
                   <li><a href="#amref">Amref International University</a></li>
               </ul>
           </li>
+          <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
       </ul>
   </nav>
@@ -64,5 +64,38 @@
         </div>
     </div>
   </section>
+
+<!--reviews section-->
+
+<div id="reviews-section">
+    <h2>Reviews</h2>
+    
+    <!-- Review Form -->
+    <form id="reviewForm" data-event-id="1"> <!-- Replace 1 with actual event ID -->
+        <input type="hidden" name="event_id" value="1"> <!-- Dynamic Event ID -->
+        <input type="hidden" name="user_id" value="2"> <!-- Dynamic User ID (From Session) -->
+
+        <label for="rating">Rating</label>
+        <select id="rating" name="rating" required>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <label for="comment">Your Review</label>
+        <textarea id="comment" name="comment" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <!-- Reviews List -->
+    <div id="reviews-container">
+        <!-- Reviews will be loaded here by JavaScript -->
+    </div>
+</div>
+
+
 </body>
 </html>
