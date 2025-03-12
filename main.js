@@ -129,3 +129,40 @@ document.addEventListener("DOMContentLoaded", function () {
         loadReviews(eventId);
     }
 });
+
+
+//book venue
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Open booking modal when clicking "Book This Venue"
+    document.querySelectorAll(".btn-book").forEach(button => {
+        button.addEventListener("click", function () {
+            let venueId = this.getAttribute("data-venue-id"); // Get venue ID
+            document.getElementById("venue_id").value = venueId;
+            document.getElementById("bookingModal").style.display = "block"; // Show modal
+        });
+    });
+
+    // Handle booking form submission
+    document.getElementById("bookingForm")?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let formData = new FormData(this);
+
+        fetch("book_venue.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Show success message
+            document.getElementById("bookingModal").style.display = "none"; // Hide modal
+        })
+        .catch(error => console.error("Error:", error));
+    });
+
+    // Close booking modal
+    document.getElementById("closeModal")?.addEventListener("click", function () {
+        document.getElementById("bookingModal").style.display = "none";
+    });
+});
+
