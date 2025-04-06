@@ -61,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.forEach(event => {
                     eventContainer.innerHTML += `
                         <div class="event-details">
-    <div class="event-type">${event.event_type}</div>
-    <h3>${event.title}</h3>
+    <div class="event-type">${events_occ.event_type}</div>
+    <h3>${events_occ.title}</h3>
     <div class="event-info">
-        <p><i class="fas fa-clock"></i> ${event.start_time} - ${event.end_time}</p>
-        <p><i class="fas fa-map-marker-alt"></i> ${event.venue_id}</p>
+        <p><i class="fas fa-clock"></i> ${events_occ.start_time} - ${events_occ.end_time}</p>
+        <p><i class="fas fa-map-marker-alt"></i> ${events_occ.venue_id}</p>
     </div>
-    <p class="event-description">${event_desc}</p>
+    <p class="event-description">${events_occ.event_desc}</p>
     <div class="event-footer">
-        <span class="price">$${event.price}</span>
+        <span class="price">$${events_occ.price}</span>
         <button class="btn-small">RSVP</button>
     </div>`;
                 });
